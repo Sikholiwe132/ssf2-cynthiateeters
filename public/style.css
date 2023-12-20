@@ -7,7 +7,7 @@
     --font-primary: 'Quicksand', sans-serif;
     --font-secondary: 'Pacifico', cursive;
     --font-color: #000000;
-    --bg-color: #faf9fa;
+    --bg-color: #ffffff;
     --link-color: #e849a9;
 }
 
@@ -47,8 +47,20 @@ body {
 }
 
 header {
+    display: grid;
+    background-image: url("../img/fluff.jpg");
+    background-size: cover;
+    min-height: 20vh;
     padding: 20px 0;
     text-align: center;
+}
+
+header .container {
+    max-width: 40em;
+    margin: 2em auto;
+    padding: 2.5rem;
+    border-left: 1em;
+    border-radius: 1em;
 }
 
 header h1 {
@@ -57,16 +69,16 @@ header h1 {
     margin-bottom: 20px;
     font-family: 'Passion One', sans-serif;
     color: #4a4a4a;
-    animation: flash 2s infinite alternate;
+    animation: flash 1s infinite alternate;
 }
 
 @keyframes flash {
     0% {
-        color: black;
+        color: rgb(255, 253, 253);
     }
 
     100% {
-        color: white;
+        color: rgb(0, 0, 0);
     }
 }
 
@@ -156,6 +168,42 @@ main ul {
 main ul {
     list-style-position: inside;
 }
+
+section ul {
+    font-weight: 900;
+    font-size: medium;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    list-style: none;
+}
+
+section ul li {
+    transition: all 0.5s ease-in-out;
+    padding: clamp(0.5em, 1vw, 1em);
+    border-style: solid #ee99cc;
+    background-size: contain;
+    background-color: #ee99cc;
+}
+
+section ul li:hover {
+    transform: scale(1.3);
+    transform: rotate(-3deg);
+    animation: jiggle 0.1s ease-in-out infinite alternate;
+}
+
+@keyframes jiggle {
+    0% {
+        transform: rotate(-3deg);
+    }
+
+    100% {
+        transform: rotate(3deg);
+    }
+}
+
 
 .profile,
 #styles,
