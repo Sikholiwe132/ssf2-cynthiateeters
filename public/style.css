@@ -95,8 +95,11 @@ nav ul {
     justify-content: space-between;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+
 }
 
 nav li {
