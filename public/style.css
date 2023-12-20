@@ -6,8 +6,8 @@
 :root {
     --font-primary: 'Quicksand', sans-serif;
     --font-secondary: 'Pacifico', cursive;
-    --font-color: #4a4a4a;
-    --bg-color: #fde6f2;
+    --font-color: #000000;
+    --bg-color: #faf9fa;
     --link-color: #e849a9;
 }
 
@@ -48,6 +48,7 @@ body {
 
 header {
     padding: 20px 0;
+    text-align: center;
 }
 
 header h1 {
@@ -69,10 +70,19 @@ header h1 {
     }
 }
 
-header h2,
-header p,
+header h2 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+header p {
+    text-align: center;
+    font-size: 1em;
+}
+
 nav ul li {
     margin-bottom: 10px;
+    text-align: center;
 }
 
 nav {
@@ -90,15 +100,15 @@ nav ul {
 }
 
 nav li {
-    display: inline-block;
+    display: block;
 }
 
 nav a {
     display: block;
-    padding: 10px 20px;
+    padding: 10px 0;
     text-decoration: none;
     color: var(--font-color);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     position: relative;
     transition: transform 0.3s ease-in-out;
