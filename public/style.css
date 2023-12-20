@@ -1,0 +1,144 @@
+/* Reset/Normalize */
+@import url("https://fonts.googleapis.com/css2?family=Irish+Grover&family=Merriweather:ital,wght@1,300&family=Pacifico&display=swap");
+
+:root {
+    --font-primary: 'Irish Grover', sans-serif;
+    --font-color: #0e0d0d;
+    --bg-color: #f8f8f8;
+    --link-color: #7646c4;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--font-color);
+    line-height: 1.6;
+    margin: 0;
+    background-color: var(--bg-color);
+    background-image: url('img/pink-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    position: absolute;
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    overflow: visible;
+}
+
+header {
+    padding: 20px 0;
+}
+
+header h1,
+header h2,
+header p,
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 2fr));
+    text-align: center;
+    font-size: 1, 5rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #e08cd2;
+}
+
+
+nav a:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+}
+
+main {
+    padding: 20px 0;
+}
+
+main h2,
+main h3,
+main p,
+main ul {
+    margin-bottom: 15px;
+}
+
+main ul {
+    list-style-position: inside;
+}
+
+.profile,
+#styles,
+.page-footer {
+    background-color: #e08cd2;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.page-footer p,
+.page-footer a {
+    margin-bottom: 10px;
+}
+
+#styles h2 {
+    margin-bottom: 15px;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    margin-bottom: 10px;
+}
+
+.features a {
+    color: var(--link-color);
+}
+
+
+/* Media Query */
+@media (min-width: 320px) {
+    body {
+        font-size: 16px;
+    }
+
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+}
