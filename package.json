@@ -4,9 +4,9 @@
   "description": "A starter index.html file and scss files for a simple setup to watch and compile your Sass using 11ty.",
   "main": "index.html",
   "scripts": {
-    "watch:sass": "sass  --no-source-map --watch src/sass:public",
+    "watch:sass": "sass --no-source-map --watch src/sass:public",
     "watch:eleventy": "eleventy --serve",
-    "build:sass": "sass  --no-source-map src/sass:public",
+    "build:sass": "sass --no-source-map src/sass:public",
     "build:eleventy": "eleventy",
     "postbuild": "postcss public/*.css -u autoprefixer cssnano -r --no-map",
     "start": "npm-run-all build:sass --parallel watch:*",
